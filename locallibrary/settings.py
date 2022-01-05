@@ -39,11 +39,11 @@ STATICFILES_DIRS = (
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-gn^^569d&fjezj4meo51btus1cala)oddgbe8v0@ta_z^7=+_8')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#export DJANGO_DEBUG=False
+#DEBUG=True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') == 'True'
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 
@@ -149,9 +149,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-
-
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
