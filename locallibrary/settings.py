@@ -43,7 +43,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-gn^^569d&fjezj
 DEBUG = os.environ.get('DJANGO_DEBUG', '') == 'True'
 
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', '34.201.81.34']
 
 # Application definition
 
