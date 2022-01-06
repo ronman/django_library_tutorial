@@ -144,7 +144,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Activate Django-Heroku when deployed on Heroku
 django_heroku.settings(locals())
