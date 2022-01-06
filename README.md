@@ -5,3 +5,5 @@ This is part of the Coding Nomads Django Course, Section 15, which links to the 
 
 NOTICE: When running on Heroku, enable, toward the end of settings.py, the line:
 django_heroku.settings(locals())
+
+You'll have to enter some users in the database using admin/ to do anything useful.
