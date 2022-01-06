@@ -147,7 +147,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Activate Django-Heroku when deployed on Heroku
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 """
 LOGGING = {
