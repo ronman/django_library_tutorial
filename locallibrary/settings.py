@@ -25,17 +25,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
 
-# Extra places for collectstatic to find static files.
-#STATICFILES_DIRS = (
-    #os.path.join(BASE_DIR, 'static'),
-#)
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-gn^^569d&fjezj4meo51btus1cala)oddgbe8v0@ta_z^7=+_8'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-gn^^569d&fjezj4meo51btus1cala)oddgbe8v0@ta_z^7=+_8')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -44,8 +38,6 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') == 'True'
 
 
 ALLOWED_HOSTS = ['localhost', 'vast-meadow-35096.herokuapp.com']
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -147,21 +139,17 @@ LOGIN_REDIRECT_URL = '/'
 # Since email sending isn't installed yet, this copies emails (e.g. password reset) to the console.
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# Static files (CSS, JavaScript, Images)
+# Static files info (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# Attempting to resolve 'Missing staticfiles manifest entry' error on Heroku:
-#WHITENOISE_USE_FINDERS = True
-#WHITENOISE_MANIFEST_STRICT = False
-#WHITENOISE_ALLOW_ALL_ORIGINS = True
 
-
-# Activate Django-Heroku 
+# Activate Django-Heroku when deployed on Heroku
 django_heroku.settings(locals())
 
+"""
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -200,3 +188,4 @@ LOGGING = {
         },
     }
 }
+"""
