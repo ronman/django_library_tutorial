@@ -152,7 +152,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Attempting to resolve 'Missing staticfiles manifest entry' error on Heroku:
 WHITENOISE_USE_FINDERS = True
 WHITENOISE_MANIFEST_STRICT = False
