@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    #'django.contrib.staticfiles',
+    'django.contrib.staticfiles',
     # my new application
     'catalog.apps.CatalogConfig',
 ]
@@ -154,13 +154,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Attempting to resolve 'Missing staticfiles manifest entry' error on Heroku:
-WHITENOISE_USE_FINDERS = True
-WHITENOISE_MANIFEST_STRICT = False
-WHITENOISE_ALLOW_ALL_ORIGINS = True
+#WHITENOISE_USE_FINDERS = True
+#WHITENOISE_MANIFEST_STRICT = False
+#WHITENOISE_ALLOW_ALL_ORIGINS = True
 
 
 # Activate Django-Heroku 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 
 LOGGING = {
     'version': 1,
